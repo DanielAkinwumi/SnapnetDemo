@@ -21,7 +21,7 @@ stages:
 - stage: Build
   displayName: Build stage
   variables:
-    phpVersion: '8.2'
+    phpVersion: '7.3'
   jobs:
   - job: BuildJob
     pool:
