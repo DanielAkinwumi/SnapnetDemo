@@ -40,7 +40,8 @@ stages:
     - script: composer install --no-interaction --prefer-dist
       workingDirectory: $(rootFolder)
       displayName: 'Composer install'
-          - task: ArchiveFiles@2
+
+    - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
         rootFolderOrFile: '$(rootFolder)'
@@ -52,4 +53,3 @@ stages:
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       displayName: 'Upload package'
       artifact: drop
-
